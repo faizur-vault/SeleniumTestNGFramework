@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-29T00:27:19 IST" name="Default suite" finished-at="2024-06-29T00:27:26 IST" duration-ms="6889">
+    <groups>
+    </groups>
+    <test started-at="2024-06-29T00:27:19 IST" name="Default test" finished-at="2024-06-29T00:27:26 IST" duration-ms="6889">
+      <class name="module_LoginPage.TS_001_ValidateLoginCredentials">
+        <test-method is-config="true" signature="extentReportInitializer()[pri:0, instance:module_LoginPage.TS_001_ValidateLoginCredentials@2d1ef81a]" started-at="2024-06-29T00:27:19 IST" name="extentReportInitializer" finished-at="2024-06-29T00:27:19 IST" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReportInitializer -->
+        <test-method is-config="true" signature="driverInitializer(java.lang.reflect.Method)[pri:0, instance:module_LoginPage.TS_001_ValidateLoginCredentials@2d1ef81a]" started-at="2024-06-29T00:27:20 IST" name="driverInitializer" finished-at="2024-06-29T00:27:24 IST" duration-ms="3383" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void module_LoginPage.TS_001_ValidateLoginCredentials.TC_001_Login_ValidCredentials(java.lang.String,java.lang.String) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInitializer -->
+        <test-method signature="TC_001_Login_ValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:module_LoginPage.TS_001_ValidateLoginCredentials@2d1ef81a]" started-at="2024-06-29T00:27:24 IST" name="TC_001_Login_ValidCredentials" data-provider="TestData_Login" finished-at="2024-06-29T00:27:25 IST" duration-ms="1202" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_Login_ValidCredentials -->
+        <test-method is-config="true" signature="captureReport(org.testng.ITestResult)[pri:0, instance:module_LoginPage.TS_001_ValidateLoginCredentials@2d1ef81a]" started-at="2024-06-29T00:27:25 IST" name="captureReport" finished-at="2024-06-29T00:27:25 IST" duration-ms="399" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_001_Login_ValidCredentials status=SUCCESS method=TS_001_ValidateLoginCredentials.TC_001_Login_ValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:module_LoginPage.TS_001_ValidateLoginCredentials@2d1ef81a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureReport -->
+        <test-method is-config="true" signature="appendTestReport()[pri:0, instance:module_LoginPage.TS_001_ValidateLoginCredentials@2d1ef81a]" started-at="2024-06-29T00:27:25 IST" name="appendTestReport" finished-at="2024-06-29T00:27:26 IST" duration-ms="339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appendTestReport -->
+      </class> <!-- module_LoginPage.TS_001_ValidateLoginCredentials -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
