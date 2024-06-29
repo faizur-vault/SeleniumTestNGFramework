@@ -1,23 +1,22 @@
 package pageEvents;
 
 import java.io.IOException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.aventstack.extentreports.Status;
+
+import base.BaseTest;
 import pageObjects.PageObjects_Home;
+import utilities.ElementFetch;
+import utilities.WaitForElement;
 
-public class PageEvents_Home {
+public class PageEvents_Home extends BaseTest {
 
-	WebDriver driver;
-	WebDriverWait wait;
+	ElementFetch eleFet = new ElementFetch();
 
-	public PageEvents_Home(WebDriver driver, WebDriverWait wait) {
-		this.driver = driver;
-		this.wait = wait;
+	public void selectLoginOption() throws IOException, InterruptedException {
+		WaitForElement.inTime(eleFet.getWebElement("ID", PageObjects_Home.Login_MenuOption_ID).isEnabled(), 5);
+		eleFet.getWebElement("ID", PageObjects_Home.Login_MenuOption_ID).click();
+		extentTestLogger.log(Status.PASS, "Clicked on Login Option");
 	}
 
-	public void selectLoginOption() throws IOException {
-		wait.until(ExpectedConditions.elementToBeClickable(PageObjects_Home.Login_MenuOption));
-		PageObjects_Home.Login_MenuOption.click();
-	}
 }

@@ -7,7 +7,7 @@ import base.DataManagement;
 import pageEvents.PageEvents_Home;
 import pageEvents.PageEvents_Login;
 
-public class TS_001_ValidateLoginCredentials extends BaseTest {
+public class TS_001_ValidateLoginCredentials2 extends BaseTest {
 	PageEvents_Home homePageEvents = new PageEvents_Home();
 	PageEvents_Login loginPageEvents = new PageEvents_Login();
 	

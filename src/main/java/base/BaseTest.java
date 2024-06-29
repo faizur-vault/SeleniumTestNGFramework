@@ -10,8 +10,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -33,24 +35,23 @@ public class BaseTest {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 
-	@BeforeTest
+	@BeforeSuite
 	public void extentReportInitializer() {
-		extentSparkReporter = new ExtentSparkReporter(
-				System.getProperty("user.dir") + "/test-output/extentReport.html");
+		extentSparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/extentReport.html");
 		extentReports = new ExtentReports();
 		extentReports.attachReporter(extentSparkReporter);
 		extentReports.setSystemInfo("HostName", "RHEL8");
 		extentReports.setSystemInfo("UserName", "root");
 		extentSparkReporter.config().setDocumentTitle("DemoBlaze");
 		extentSparkReporter.config().setReportName("DemoBlaze Automation Test Report");
-		extentSparkReporter.config().setTheme(Theme.DARK);
+		extentSparkReporter.config().setTheme(Theme.STANDARD);
 		extentSparkReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
 	}
 
 	@BeforeMethod
 	@Parameters("browserName")
-	public void driverInitializer(String browserName,Method testMethod) {
-		extentTestLogger = extentReports.createTest(testMethod.getName());
+	public void driverInitializer(String browserName, Method testMethod) throws InterruptedException {
+		extentTestLogger = extentReports.createTest(testMethod.getName()+" "+browserName+" Browser");
 		setupDriver(browserName);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.manage().window().maximize();
@@ -75,17 +76,19 @@ public class BaseTest {
 	}
 
 	@AfterTest
-	public void appendTestReport() {
-		extentReports.flush();
-	}
+    public void tear()
+    {
+        extentReports.flush();
+    }
 
 	public void setupDriver(String browserName) {
-		if (browserName.equalsIgnoreCase("chrome")) {
+		if (browserName.equalsIgnoreCase("Chrome")) {
 			driver = new ChromeDriver();
-		} else if (browserName.equalsIgnoreCase("firefox")) {
+		} else if (browserName.equalsIgnoreCase("Firefox")) {
 			driver = new FirefoxDriver();
-		} else if (browserName.equalsIgnoreCase("edge")) {
+		} else if (browserName.equalsIgnoreCase("Edge")) {
 			driver = new EdgeDriver();
 		}
 	}
+	
 }

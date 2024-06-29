@@ -1,26 +1,14 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
 import base.BaseTest;
 
 public class PageObjects_Home extends BaseTest {
-	public static WebElement Home_MenuOption = driver
-			.findElement(By.xpath("//a[@class='nav-link' and text()='Home ']"));
 
-	@FindBy(xpath = "//a[@class='nav-link' and text()='Contact']")
-	public static WebElement Contact_MenuOption;
+	public static String Home_MenuOption_XPATH = "//a[@class='nav-link' and text()='Home ']";
+	public static String Login_MenuOption_ID = "login2";
+	public static String Contact_MenuOption_XPATH = "//a[@class='nav-link' and text()='Contact']";
+	public static String AboutUs_MenuOption_XPATH = "//a[@class='nav-link' and text()='About us']";
+	public static String Cart_MenuOption_ID = "cartur";
+	public static String SignIn_MenuOption_ID = "signin2";
 
-	@FindBy(xpath = "//a[@class='nav-link' and text()='About us']")
-	public static WebElement AboutUs_MenuOption;
-
-	@FindBy(id = "cartur")
-	public static WebElement Cart_MenuOption;
-
-	public static WebElement Login_MenuOption = driver.findElement(By.id("login2"));
-
-	@FindBy(id = "signin2")
-	public static WebElement SignIn_MenuOption;
 }

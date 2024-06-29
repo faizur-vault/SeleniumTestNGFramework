@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<listeners>
-		 <listener class-name="utilities.SuiteListener"></listener>
-	</listeners>
-  <test thread-count="5" name="Test">
-	<parameter name="browserName" value="chrome"></parameter>
-    <classes>
-      <class name="module_LoginPage.TS_001_ValidateLoginCredentials"/>
-    </classes>
-  </test> <!-- Test -->
+	<suite-files>
+		<suite-file path="./test-suite/testng-first.xml"></suite-file>
+		<suite-file path="./test-suite/testng-second.xml"></suite-file>
+	</suite-files>
 </suite> <!-- Suite -->
+
