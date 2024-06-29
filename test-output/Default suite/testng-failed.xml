@@ -6,7 +6,7 @@
       <class name="module_LoginPage.TS_001_ValidateLoginCredentials">
         <methods>
           <include name="captureReport"/>
-          <include name="TC_001_Login_ValidCredentials" invocation-numbers="0"/>
+          <include name="TC_001_Login_ValidCredentials"/>
           <include name="appendTestReport"/>
           <include name="driverInitializer"/>
           <include name="extentReportInitializer"/>

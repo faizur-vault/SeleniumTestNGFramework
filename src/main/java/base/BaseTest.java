@@ -13,6 +13,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+
 //import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -46,13 +48,10 @@ public class BaseTest {
 	}
 
 	@BeforeMethod
-	//@Parameters("browserName")
-	public void driverInitializer(Method testMethod) {
+	@Parameters("browserName")
+	public void driverInitializer(String browserName,Method testMethod) {
 		extentTestLogger = extentReports.createTest(testMethod.getName());
-		//setupDriver(browserName);
-		//String browserName, 
-		//setupDriver("chrome");
-		driver = new ChromeDriver();
+		setupDriver(browserName);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.get(Constants.applicationURL);

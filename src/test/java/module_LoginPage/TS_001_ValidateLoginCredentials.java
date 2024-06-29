@@ -10,6 +10,7 @@ import pageEvents.PageEvents_Login;
 public class TS_001_ValidateLoginCredentials extends BaseTest {
 	PageEvents_Home homePageEvents;
 	PageEvents_Login loginPageEvents;
+	
 	@Test(dataProvider = "TestData_Login", dataProviderClass = DataManagement.class)
 	public void TC_001_Login_ValidCredentials(String uname, String pwd) throws IOException {
 		homePageEvents = new PageEvents_Home(driver, wait);
