@@ -17,6 +17,7 @@ public class PageEvents_Home extends BaseTest {
 		WaitForElement.inTime(eleFet.getWebElement("ID", PageObjects_Home.Login_MenuOption_ID).isEnabled(), 5);
 		eleFet.getWebElement("ID", PageObjects_Home.Login_MenuOption_ID).click();
 		extentTestLogger.log(Status.PASS, "Clicked on Login Option");
+		log.info("Clicked on Login Option");
 	}
 
 }

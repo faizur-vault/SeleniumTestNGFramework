@@ -3,6 +3,8 @@ package base;
 import java.lang.reflect.Method;
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -10,11 +12,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 //import org.testng.annotations.Parameters;
@@ -34,10 +34,13 @@ public class BaseTest {
 	public static ExtentTest extentTestLogger;
 	public static WebDriver driver;
 	public static WebDriverWait wait;
+	public static Logger log;
 
 	@BeforeSuite
-	public void extentReportInitializer() {
-		extentSparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/extentReport.html");
+	@Parameters("suiteName")
+	public void extentReportInitializer(String suiteName) {
+		extentSparkReporter = new ExtentSparkReporter(
+				System.getProperty("user.dir") + "/test-reports/" + suiteName + "_extentReport.html");
 		extentReports = new ExtentReports();
 		extentReports.attachReporter(extentSparkReporter);
 		extentReports.setSystemInfo("HostName", "RHEL8");
@@ -45,17 +48,20 @@ public class BaseTest {
 		extentSparkReporter.config().setDocumentTitle("DemoBlaze");
 		extentSparkReporter.config().setReportName("DemoBlaze Automation Test Report");
 		extentSparkReporter.config().setTheme(Theme.STANDARD);
+		extentSparkReporter.config().setEncoding("utf-8");
 		extentSparkReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
+		log = LogManager.getLogger(BaseTest.class);
+		log.info("Extent report initialized for the Suite:" + suiteName);
 	}
 
 	@BeforeMethod
 	@Parameters("browserName")
 	public void driverInitializer(String browserName, Method testMethod) throws InterruptedException {
-		extentTestLogger = extentReports.createTest(testMethod.getName()+" "+browserName+" Browser");
 		setupDriver(browserName);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.get(Constants.applicationURL);
+		log.info("Launched the Application in " + browserName);
 	}
 
 	@AfterMethod
@@ -73,13 +79,14 @@ public class BaseTest {
 					MarkupHelper.createLabel(results.getName() + " - Test Case Skipped", ExtentColor.YELLOW));
 		}
 		driver.quit();
+		log.info("Browser is Closed");
 	}
 
 	@AfterTest
-    public void tear()
-    {
-        extentReports.flush();
-    }
+	public void tear() {
+		extentReports.flush();
+		log.info("Separated Test Method report");
+	}
 
 	public void setupDriver(String browserName) {
 		if (browserName.equalsIgnoreCase("Chrome")) {
@@ -90,5 +97,5 @@ public class BaseTest {
 			driver = new EdgeDriver();
 		}
 	}
-	
+
 }

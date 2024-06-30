@@ -11,17 +11,5 @@
       <class name="module_LoginPage.TS_001_ValidateLoginCredentials"/>
     </classes>
   </test> <!-- Test -->
-  <test thread-count="5" name="Test3">
-	<parameter name="browserName" value="Edge"></parameter>
-    <classes>
-      <class name="module_LoginPage.TS_001_ValidateLoginCredentials"/>
-    </classes>
-  </test> <!-- Test -->
-  <test thread-count="5" name="Test2">
-	<parameter name="browserName" value="Firefox"></parameter>
-    <classes>
-      <class name="module_LoginPage.TS_001_ValidateLoginCredentials"/>
-    </classes>
-  </test> <!-- Test -->
 </suite> <!-- Suite -->
 

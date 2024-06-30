@@ -9,7 +9,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
-public class DataManagement {
+public class DataManagement extends BaseTest{
 
 	@DataProvider(name = "TestData_Login")
 	public static Object[][] testDataGenerator(Method met) throws IOException {
@@ -40,6 +40,7 @@ public class DataManagement {
 			break;
 		}
 		testDataWorkbook1.close();
+		log.info("Data loaded for "+met.getName());
 		return testLoginCreds;
 	}
 
