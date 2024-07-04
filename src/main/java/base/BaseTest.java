@@ -1,8 +1,6 @@
 package base;
 
-import java.lang.reflect.Method;
 import java.time.Duration;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -16,8 +14,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
-
-//import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -25,7 +21,6 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
 import utilities.Constants;
 
 public class BaseTest {
@@ -33,10 +28,10 @@ public class BaseTest {
 	public static ExtentReports extentReports;
 	public static ExtentTest extentTestLogger;
 	public static WebDriver driver;
-	public static WebDriverWait wait;
+	public static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	public static Logger log;
 
-	@BeforeSuite
+	@BeforeSuite(alwaysRun = true)
 	@Parameters("suiteName")
 	public void extentReportInitializer(String suiteName) {
 		extentSparkReporter = new ExtentSparkReporter(
@@ -54,9 +49,9 @@ public class BaseTest {
 		log.info("Extent report initialized for the Suite:" + suiteName);
 	}
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	@Parameters("browserName")
-	public void driverInitializer(String browserName, Method testMethod) throws InterruptedException {
+	public void driverInitializer(String browserName) throws InterruptedException {
 		setupDriver(browserName);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.manage().window().maximize();
@@ -64,7 +59,7 @@ public class BaseTest {
 		log.info("Launched the Application in " + browserName);
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void captureReport(ITestResult results) {
 		if (results.getStatus() == ITestResult.FAILURE) {
 			extentTestLogger.log(Status.FAIL,
@@ -82,7 +77,7 @@ public class BaseTest {
 		log.info("Browser is Closed");
 	}
 
-	@AfterTest
+	@AfterTest(alwaysRun = true)
 	public void tear() {
 		extentReports.flush();
 		log.info("Separated Test Method report");

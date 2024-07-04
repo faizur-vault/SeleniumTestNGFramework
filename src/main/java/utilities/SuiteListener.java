@@ -15,7 +15,7 @@ import org.testng.annotations.ITestAnnotation;
 
 import base.BaseTest;
 
-public class SuiteListener implements ITestListener, IAnnotationTransformer {
+public class SuiteListener implements ITestListener, IAnnotationTransformer{
 
 	public void onTestFailure(ITestResult result) {
 		String filename = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator

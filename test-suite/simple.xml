@@ -6,9 +6,10 @@
 		 <listener class-name="utilities.SuiteListener"></listener>
 	</listeners>
   <test thread-count="5" name="Test1">
-	<parameter name="browserName" value="Chrome"></parameter>
+	<parameter name="browserName" value="Firefox"></parameter>
     <classes>
-      <class name="module_LoginPage.TS_001_ValidateLoginCredentials"/>
+      <!--<class name="module_LoginPage.TS_001_ValidateLoginCredentials"/>-->
+      <class name="module_LoginPage.TS_002_VerifyCancelLogin"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

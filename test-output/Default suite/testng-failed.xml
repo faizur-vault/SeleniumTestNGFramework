@@ -6,10 +6,10 @@
       <class name="module_LoginPage.TS_001_ValidateLoginCredentials">
         <methods>
           <include name="captureReport"/>
-          <include name="TC_001_Login_ValidCredentials"/>
-          <include name="appendTestReport"/>
-          <include name="driverInitializer"/>
+          <include name="TC_001_Login_WrongPassword"/>
           <include name="extentReportInitializer"/>
+          <include name="driverInitializer"/>
+          <include name="tear"/>
         </methods>
       </class> <!-- module_LoginPage.TS_001_ValidateLoginCredentials -->
     </classes>

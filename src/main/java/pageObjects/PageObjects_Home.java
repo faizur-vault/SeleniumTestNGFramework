@@ -10,5 +10,5 @@ public class PageObjects_Home extends BaseTest {
 	public static String AboutUs_MenuOption_XPATH = "//a[@class='nav-link' and text()='About us']";
 	public static String Cart_MenuOption_ID = "cartur";
 	public static String SignIn_MenuOption_ID = "signin2";
-
+	public static String Name_Of_User_XPATH = "#nameofuser";
 }
