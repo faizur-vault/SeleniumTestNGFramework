@@ -8,48 +8,101 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><th colspan="8">02.Integration_TestSuite</th></tr>
-<tr><td><a href="#t0">Chrome</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">11,049</td><td>integration</td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Firefox</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">14,576</td><td>integration</td><td></td></tr>
-<tr><td><a href="#t2">Edge</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">14,105</td><td>integration</td><td></td></tr>
-<tr><th colspan="8">01.Smoke_TestSuite</th></tr>
-<tr class="stripe"><td><a href="#t3">Chrome</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">18,028</td><td>smoke</td><td></td></tr>
-<tr><td><a href="#t4">Firefox</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,684</td><td>smoke</td><td></td></tr>
-<tr class="stripe"><td><a href="#t5">Edge</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">20,664</td><td>smoke</td><td></td></tr>
-<tr><th colspan="8">03.Regression_TestSuite</th></tr>
-<tr><td><a href="#t6">Chrome</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">11,482</td><td>regression</td><td></td></tr>
-<tr class="stripe"><td><a href="#t7">Firefox</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">13,906</td><td>regression</td><td></td></tr>
-<tr><td><a href="#t8">Edge</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">13,751</td><td>regression</td><td></td></tr>
-<tr><th>Total</th><th class="num">18</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">137,245</th><th colspan="2"></th></tr>
+<tr><th colspan="8">01.Smoke_Headless_TestSuite</th></tr>
+<tr><td><a href="#t0">Firefox</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">26,433</td><td>smoke</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody><tr><th colspan="4">02.Integration_TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m0">TC_003_Login_InvalidUsername</a></td><td rowspan="1">1720081570447</td><td rowspan="1">2220</td></tr><tr class="passedodd"><td rowspan="1">module_LoginPage.TS_002_VerifyCancelLogin</td><td><a href="#m1">TC_005_CancelLogin_X</a></td><td rowspan="1">1720081574672</td><td rowspan="1">4267</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Firefox &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m2">TC_003_Login_InvalidUsername</a></td><td rowspan="1">1720081583491</td><td rowspan="1">1571</td></tr><tr class="passedodd"><td rowspan="1">module_LoginPage.TS_002_VerifyCancelLogin</td><td><a href="#m3">TC_005_CancelLogin_X</a></td><td rowspan="1">1720081590282</td><td rowspan="1">2652</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">Edge &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m4">TC_003_Login_InvalidUsername</a></td><td rowspan="1">1720081596398</td><td rowspan="1">2305</td></tr><tr class="passedodd"><td rowspan="1">module_LoginPage.TS_002_VerifyCancelLogin</td><td><a href="#m5">TC_005_CancelLogin_X</a></td><td rowspan="1">1720081603104</td><td rowspan="1">3361</td></tr></tbody>
-<tbody><tr><th colspan="4">01.Smoke_TestSuite</th></tr></tbody><tbody id="t3"><tr><th colspan="4">Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m6">TC_001_Login_ValidCredentials</a></td><td rowspan="1">1720081513547</td><td rowspan="1">6359</td></tr><tr class="passedodd"><td rowspan="1">module_LoginPage.TS_002_VerifyCancelLogin</td><td><a href="#m7">TC_004_CancelLogin_Close</a></td><td rowspan="1">1720081523607</td><td rowspan="1">3418</td></tr></tbody>
-<tbody id="t4"><tr><th colspan="4">Firefox &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m8">TC_001_Login_ValidCredentials</a></td><td rowspan="1">1720081532462</td><td rowspan="1">6130</td></tr><tr class="passedodd"><td rowspan="1">module_LoginPage.TS_002_VerifyCancelLogin</td><td><a href="#m9">TC_004_CancelLogin_Close</a></td><td rowspan="1">1720081543867</td><td rowspan="1">2637</td></tr></tbody>
-<tbody id="t5"><tr><th colspan="4">Edge &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m10">TC_001_Login_ValidCredentials</a></td><td rowspan="1">1720081553056</td><td rowspan="1">6276</td></tr><tr class="passedodd"><td rowspan="1">module_LoginPage.TS_002_VerifyCancelLogin</td><td><a href="#m11">TC_004_CancelLogin_Close</a></td><td rowspan="1">1720081563331</td><td rowspan="1">3445</td></tr></tbody>
-<tbody><tr><th colspan="4">03.Regression_TestSuite</th></tr></tbody><tbody id="t6"><tr><th colspan="4">Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m12">TC_002_Login_WrongPassword</a></td><td rowspan="1">1720081610708</td><td rowspan="1">2201</td></tr><tr class="passedodd"><td rowspan="1">module_LoginPage.TS_002_VerifyCancelLogin</td><td><a href="#m13">TC_005_CancelLogin_X</a></td><td rowspan="1">1720081615755</td><td rowspan="1">3385</td></tr></tbody>
-<tbody id="t7"><tr><th colspan="4">Firefox &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m14">TC_002_Login_WrongPassword</a></td><td rowspan="1">1720081623464</td><td rowspan="1">1512</td></tr><tr class="passedodd"><td rowspan="1">module_LoginPage.TS_002_VerifyCancelLogin</td><td><a href="#m15">TC_005_CancelLogin_X</a></td><td rowspan="1">1720081629910</td><td rowspan="1">2661</td></tr></tbody>
-<tbody id="t8"><tr><th colspan="4">Edge &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m16">TC_002_Login_WrongPassword</a></td><td rowspan="1">1720081635906</td><td rowspan="1">2101</td></tr><tr class="passedodd"><td rowspan="1">module_LoginPage.TS_002_VerifyCancelLogin</td><td><a href="#m17">TC_005_CancelLogin_X</a></td><td rowspan="1">1720081642277</td><td rowspan="1">3427</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">01.Smoke_Headless_TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Firefox &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m0">captureReport</a></td><td rowspan="1">1720092950818</td><td rowspan="1">8</td></tr><tr><th colspan="4">Firefox &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m1">TC_001_Login_ValidCredentials</a></td><td rowspan="1">1720092956825</td><td rowspan="1">503</td></tr><tr><th colspan="4">Firefox &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">module_LoginPage.TS_001_ValidateLoginCredentials</td><td><a href="#m2">TC_001_Login_ValidCredentials</a></td><td rowspan="1">1720092948835</td><td rowspan="1">1978</td></tr><tr><th colspan="4">Firefox &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">module_LoginPage.TS_002_VerifyCancelLogin</td><td><a href="#m3">TC_004_CancelLogin_Close</a></td><td rowspan="1">1720092963993</td><td rowspan="1">2764</td></tr></tbody>
 </table>
-<h2>Chrome</h2><h3 id="m0">module_LoginPage.TS_001_ValidateLoginCredentials#TC_003_Login_InvalidUsername</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>testjnhjbfgjfbv</td><td>test</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">module_LoginPage.TS_002_VerifyCancelLogin#TC_005_CancelLogin_X</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Firefox</h2><h3 id="m2">module_LoginPage.TS_001_ValidateLoginCredentials#TC_003_Login_InvalidUsername</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>testjnhjbfgjfbv</td><td>test</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">module_LoginPage.TS_002_VerifyCancelLogin#TC_005_CancelLogin_X</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Edge</h2><h3 id="m4">module_LoginPage.TS_001_ValidateLoginCredentials#TC_003_Login_InvalidUsername</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>testjnhjbfgjfbv</td><td>test</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">module_LoginPage.TS_002_VerifyCancelLogin#TC_005_CancelLogin_X</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Chrome</h2><h3 id="m6">module_LoginPage.TS_001_ValidateLoginCredentials#TC_001_Login_ValidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>test</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">module_LoginPage.TS_002_VerifyCancelLogin#TC_004_CancelLogin_Close</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Firefox</h2><h3 id="m8">module_LoginPage.TS_001_ValidateLoginCredentials#TC_001_Login_ValidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>test</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">module_LoginPage.TS_002_VerifyCancelLogin#TC_004_CancelLogin_Close</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Edge</h2><h3 id="m10">module_LoginPage.TS_001_ValidateLoginCredentials#TC_001_Login_ValidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>test</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">module_LoginPage.TS_002_VerifyCancelLogin#TC_004_CancelLogin_Close</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Chrome</h2><h3 id="m12">module_LoginPage.TS_001_ValidateLoginCredentials#TC_002_Login_WrongPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>testvghfgfdfg</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">module_LoginPage.TS_002_VerifyCancelLogin#TC_005_CancelLogin_X</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Firefox</h2><h3 id="m14">module_LoginPage.TS_001_ValidateLoginCredentials#TC_002_Login_WrongPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>testvghfgfdfg</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">module_LoginPage.TS_002_VerifyCancelLogin#TC_005_CancelLogin_X</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Edge</h2><h3 id="m16">module_LoginPage.TS_001_ValidateLoginCredentials#TC_002_Login_WrongPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>testvghfgfdfg</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">module_LoginPage.TS_002_VerifyCancelLogin#TC_005_CancelLogin_X</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Firefox</h2><h3 id="m0">module_LoginPage.TS_001_ValidateLoginCredentials#captureReport</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=TC_001_Login_ValidCredentials status=SKIP method=TS_001_ValidateLoginCredentials.TC_001_Login_ValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:module_LoginPage.TS_001_ValidateLoginCredentials@707194ba] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [aaac2b9a-db91-4006-92cd-5d8180393b97, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0.2, moz:accessibilityChecks: false, moz:buildID: 20240624183754, moz:debuggerAddress: 127.0.0.1:40624, moz:geckodriverVersion: 0.34.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 33880, moz:profile: C:\Users\rahma\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:40624/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:433)
+	at org.openqa.selenium.firefox.FirefoxDriver.quit(FirefoxDriver.java:397)
+	at base.BaseTest.captureReport(BaseTest.java:86)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.lang.NullPointerException: Cannot invoke &quot;java.net.http.HttpClient.sendAsync(java.net.http.HttpRequest, java.net.http.HttpResponse$BodyHandler)&quot; because &quot;this.client&quot; is null
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 31 more
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;java.net.http.HttpClient.sendAsync(java.net.http.HttpRequest, java.net.http.HttpResponse$BodyHandler)&quot; because &quot;this.client&quot; is null
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:379)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">module_LoginPage.TS_001_ValidateLoginCredentials#TC_001_Login_ValidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>test</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;a id=&quot;login2&quot; class=&quot;nav-link&quot; href=&quot;#&quot;&gt; is not clickable at point (1006,37) because another element &lt;div id=&quot;logInModal&quot; class=&quot;modal fade show&quot;&gt; obscures it
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [cc6025ea-016b-4925-b9f4-637300b094bb, clickElement {id=2248d976-115e-49fd-8e9f-f8ceb578d28c}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0.2, moz:accessibilityChecks: false, moz:buildID: 20240624183754, moz:debuggerAddress: 127.0.0.1:18215, moz:geckodriverVersion: 0.34.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 43476, moz:profile: C:\Users\rahma\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:18215/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (cc6025ea-016b-4925-b9f4-637300b094bb)] -&gt; id: login2]
+Session ID: cc6025ea-016b-4925-b9f4-637300b094bb
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pageEvents.PageEvents_Home.selectLoginOption(PageEvents_Home.java:21)
+	at module_LoginPage.TS_001_ValidateLoginCredentials.TC_001_Login_ValidCredentials(TS_001_ValidateLoginCredentials.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">module_LoginPage.TS_001_ValidateLoginCredentials#TC_001_Login_ValidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>test</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [aaac2b9a-db91-4006-92cd-5d8180393b97, isElementDisplayed {id=20a4c91f-ab84-4c8e-b478-06f322a8e43e}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0.2, moz:accessibilityChecks: false, moz:buildID: 20240624183754, moz:debuggerAddress: 127.0.0.1:40624, moz:geckodriverVersion: 0.34.0, moz:headless: true, moz:platformVersion: 10.0, moz:processID: 33880, moz:profile: C:\Users\rahma\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:40624/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (aaac2b9a-db91-4006-92cd-5d8180393b97)] -&gt; id: loginusername]
+Session ID: aaac2b9a-db91-4006-92cd-5d8180393b97
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at pageEvents.PageEvents_Login.enterUsername(PageEvents_Login.java:20)
+	at module_LoginPage.TS_001_ValidateLoginCredentials.TC_001_Login_ValidCredentials(TS_001_ValidateLoginCredentials.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">module_LoginPage.TS_002_VerifyCancelLogin#TC_004_CancelLogin_Close</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

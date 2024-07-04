@@ -5,8 +5,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -50,9 +53,16 @@ public class BaseTest {
 	}
 
 	@BeforeMethod(alwaysRun = true)
-	@Parameters("browserName")
-	public void driverInitializer(String browserName) throws InterruptedException {
-		setupDriver(browserName);
+	@Parameters({"browserName", "headless"})
+	public void driverInitializer(String browserName, Boolean headless) throws InterruptedException {
+		if(headless)
+		{
+			setupHeadlessDriver(browserName);
+		}
+		else
+		{
+			setupDriver(browserName);
+		}
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.get(Constants.applicationURL);
@@ -90,6 +100,22 @@ public class BaseTest {
 			driver = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("Edge")) {
 			driver = new EdgeDriver();
+		}
+	}
+	
+	public void setupHeadlessDriver(String browserName) {
+		if (browserName.equalsIgnoreCase("Chrome")) {
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("headless");
+			driver = new ChromeDriver(options);
+		} else if (browserName.equalsIgnoreCase("Firefox")) {
+			FirefoxOptions options=new FirefoxOptions();
+			options.addArguments("--headless");
+			driver = new FirefoxDriver(options);
+		} else if (browserName.equalsIgnoreCase("Edge")) {
+			EdgeOptions options=new EdgeOptions();
+			options.addArguments("--headless");
+			driver = new EdgeDriver(options);
 		}
 	}
 

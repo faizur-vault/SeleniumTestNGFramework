@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="01.Smoke_TestSuite">
 	<parameter name="suiteName" value="01.Smoke_TestSuite"/>
+	<parameter name="headless" value="false"/>
 	<listeners>
 		<listener class-name="utilities.SuiteListener"></listener>
 	</listeners>
