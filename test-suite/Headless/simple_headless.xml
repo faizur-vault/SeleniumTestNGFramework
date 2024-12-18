@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="01.Smoke_Headless_TestSuite">
+<suite name="01.Smoke_Headless_TestSuite" parallel="tests">
 	<parameter name="suiteName" value="01.Smoke_Headless_TestSuite"/>
-	<parameter name="headless" value="true"/>
+	<parameter name="headless" value="false"/>
 	<listeners>
 		<listener class-name="utilities.SuiteListener"></listener>
 	</listeners>
-	<test thread-count="5" name="Chrome">
+	<test thread-count="5" name="Chrome1">
+		<parameter name="browserName" value="Chrome"/>
+		<groups>
+		<run>
+			<include name="smoke"/>
+		</run>
+		</groups>
+		<classes>
+			<class name="module_LoginPage.TS_001_ValidateLoginCredentials"></class>
+		</classes>
+	</test>
+	<test thread-count="5" name="Chrome2">
 		<parameter name="browserName" value="Chrome"/>
 		<groups>
 		<run>

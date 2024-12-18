@@ -6,7 +6,7 @@
 	<listeners>
 		<listener class-name="utilities.SuiteListener"></listener>
 	</listeners>
-	<test thread-count="5" name="Chrome">
+	<test thread-count="3" name="Chrome">
 		<parameter name="browserName" value="Chrome"/>
 		<groups>
 		<run>
@@ -18,7 +18,7 @@
 			<class name="module_LoginPage.TS_002_VerifyCancelLogin"></class>
 		</classes>
 	</test>
-	<test thread-count="5" name="Firefox">
+	<test thread-count="3" name="Firefox">
 		<parameter name="browserName" value="Firefox"/>
 		<groups>
 		<run>
@@ -30,7 +30,7 @@
 			<class name="module_LoginPage.TS_002_VerifyCancelLogin"></class>
 		</classes>
 	</test> 
-	<test thread-count="5" name="Edge">
+	<test thread-count="3" name="Edge">
 		<parameter name="browserName" value="Edge"/>
 		<groups>
 		<run>
