@@ -114,9 +114,11 @@ public class BaseTest {
 			driver = new FirefoxDriver(options);
 		} else if (browserName.equalsIgnoreCase("Edge")) {
 			EdgeOptions options=new EdgeOptions();
+			options.addArguments("--headless");
+			options.addArguments("--disable-gpu");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--disable-dev-shm-usage");
-			options.addArguments("--headless");
+			options.addArguments("--remote-debugging-port=9222");
 			driver = new EdgeDriver(options);
 		}
 	}
