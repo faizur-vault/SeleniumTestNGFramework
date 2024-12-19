@@ -114,6 +114,7 @@ public class BaseTest {
 			driver = new FirefoxDriver(options);
 		} else if (browserName.equalsIgnoreCase("Edge")) {
 			EdgeOptions options=new EdgeOptions();
+			options.addArguments("user-data-dir=C:\\Users\\rahma\\AppData\\Local\\Microsoft\\Edge\\User Data1");
 			options.addArguments("--headless");
 			driver = new EdgeDriver(options);
 		}

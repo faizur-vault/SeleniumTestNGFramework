@@ -1,3 +1,8 @@
 test-output
 .log
 .png
+logs/
+screenshots/
+simple_headless.xml
+target/
+test-reports/
